@@ -25,7 +25,13 @@ jobs:
       - name: Trust git repo
         run: |
           git config --global --add safe.directory /__w/fair-equitable-research/fair-equitable-research
-          
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+  
+      - name: Install tinytex
+        run: quarto install tinytex
+
       - name: Install packages from renv.lock (with cache)
         if: ${{ !env.ACT }}  
         uses: r-lib/actions/setup-renv@v2
