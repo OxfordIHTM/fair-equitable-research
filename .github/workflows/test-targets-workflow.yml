@@ -6,13 +6,11 @@ on:
   pull_request:
     branches: [main, master]
   workflow_dispatch:
-    # branches:
-    #   - '*'
 
 jobs:
   test-targets-workflow:
     runs-on: ubuntu-latest
-    container: rocker/tidyverse:4.4.1
+    container: rocker/tidyverse:4.4.2
     env:
       GIT_CRYPT_KEY64: ${{ secrets.GIT_CRYPT_KEY64 }}
     steps:
@@ -25,7 +23,7 @@ jobs:
           
       - name: Trust git repo
         run: |
-          git config --global --add safe.directory /__w/ihtm-targets-template/ihtm-targets-template
+          git config --global --add safe.directory /__w/fair-equitable-research/fair-equitable-research
           
       - name: Install packages from renv.lock (with cache)
         if: ${{ !env.ACT }}  

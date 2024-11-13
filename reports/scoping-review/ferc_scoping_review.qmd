@@ -1,0 +1,665 @@
+---
+title: Fair and Equitable Research Collaboration
+subtitle: A Scoping Review
+# author:
+#   - name: Ernest Guevarra
+#     orcid: 0000-0002-4887-4415
+#     email: ernest.guevarra@ndm.ox.ac.uk
+#     affiliation: 
+#       - name: Centre for Tropical Medicine and Global Health, Nuffield Department of Medicine, University of Oxford
+#         city: Oxford
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+bibliography: ../references.bib
+format: 
+  html:
+    toc: true
+    toc-location: left
+    embed-resources: true
+    grid:
+      body-width: 900px
+      margin-width: 300px
+    code-tools:
+      source: https://github.com/OxfordIHTM/fair-equitable-research/blob/main/reports/ferc_scoping_review.qmd
+  docx:
+    toc: true
+    toc-depth: 3
+    toc-title: Table of Contents
+    number-sections: true
+    number-depth: 3
+    reference-doc: ../reference_doc.docx
+    highlight-style: breeze
+  pdf:
+    documentclass: scrartcl
+    papersize: a4
+    toc: true
+    toc-title: Contents
+    lof: true
+    lot: true
+    number-sections: true
+    number-depth: 3
+    highlight-style: breeze
+---
+
+```{r setup}
+#| echo: false
+
+suppressPackageStartupMessages(source(here::here("packages.R")))
+for (f in list.files(here::here("R"), full.names = TRUE)) source (f)
+
+#targets::tar_load()
+```
+
+## Introduction {#sec-introduction}
+
+This document presents notes from a rapid scoping review of the current thinking, concepts, and practice in terms of fair and equitable research collaboration. This document has been prepared in support of an upcoming WHO consultation on the same topic.
+
+This document is organised in three main sections. The first section gives a background on the evolution of our concepts and definitions of partnerships from the development programming and research field leading up to our more recent conceptions of fair and equitable research collaboration. In light of these concepts, the second section identifies and discusses issues and challenges with transnational health research partnerships specifically in health research. In the final section, existing frameworks, guides, and principles on fair and equitable research collaboration are presented.
+
+## Concepts and definitions {#sec-concepts-definitions}
+
+In this section, we lay down concepts and/or definitions to terminologies relevant to the topic of fairness and equitable research collaboration. We also attempt to describe the evolution of these concepts and definitions over time either through a change in terminology and/or a change in meaning with the view that such evolution lends us an understanding of the various contexts over time in which these concepts and definitions have been formed and shaped.
+
+### Research partnerships {#sec-research-partnerships}
+
+There is some evidence in literature that points to research partnerships as being first highlighted in the agriculture "research for development" programming in the early 2000s [@horton_using_2003; @price_defining_2020]. In this field, partnerships were seen as necessary interactions between researchers and other relevant stakeholders for the purpose of effecting complex social change so as to achieve impact [@price_defining_2020].
+
+This context provides some nuance to explain some prevailing notions of research partnerships in general and some insights as to what approaches can be taken towards fair and equitable international health research.
+
+1. Research for development programmes (some of which are related to health programming) have mostly been funded directly through overseas development assistance (ODA) modalities. As such, research being seen as part of foreign aid/assistance may be reinforcing north-south or high-income country (HIC) vs low- and middle-income country (LMIC) hierarchies and power-relations. Such thinking/conception of research partnerships has reinforced patronising attitudes where the supposed receiver is expected to show some gratitude to the giver [@tangwa_giving_2017; @binka_editorial_2005] and HIC collaborators deem their LMIC collaborators as hired hands not to be involved in key decision making activities [@moyi_okwaro_dependent_2015].
+
+2. Movements within the international development field and ethical frameworks in research for development on fairness and equity can serve as templates from which to draw from for international health research. These include the: 
+
+* [Rethinking Research Collaborative](https://rethinkingresearchcollaborative.com/) [@rethinking_research_collaborative_promoting_2018] and their Principles for Fair and Equitable Research Collaboration [@rethinking_research_collaborative_promoting_2018; @newman_rethinking_2019; @fransman_rethinking_2019; @fransman_beyond_2021]
+
+* [Swiss Commission for Research Partnerships with Developing Countries (KFPE)](https://kfpe.scnat.ch/en) and their Guide on Transboundary Research Partnerships [@stockli_guide_2018]
+
+* [Council for Health Research for Development (COHRED)](https://www.cohred.org/) and their Research Fairness Initiative (RFI) [@ijsselmuiden_research_nodate; @ijsselmuiden_research_nodate-1; @ijsselmuiden_research_nodate-2]
+
+3. Partnerships from the perspective of the development field have generally been seen as approaches to improve **effectiveness** and **efficiency** of development aid. From earlier models where the whole aid-delivery machinery was external, partnerships were seen as a way to make the whole process more effective and efficient by having local partners provide the personnel and infrastructure for the delivery of aid and implementation of programmes. This approach controls costs and holds implementers accountable for efficient delivery [@laws_value_2021].
+
+### From effectiveness and efficiency to fairness and equity {#sec-fairness-equity}
+
+Given the background of ODA in the evolution of our concepts on and implementation of partnerships (in general and in research in particular) and the emphasis on effectiveness and efficiency leading to impact, the impact metric has often been defined as research findings influencing and/or changing policy and practice in the specific country context.
+
+@newman_rethinking_2019 presents four models of research impact ([@fig-impact-model1; @fig-impact-model2; @fig-impact-model3; @fig-impact-model4]) that cover various traditions, approaches, and understandings emerging from health and social care, cultural heritage and community development, and science and technology research sectors.
+
+[@fig-impact-model1; @fig-impact-model2] depict earlier linear models of knowledge to action that started out as simplistic knowledge transfer (@fig-impact-model1) evolving into some form of engagement and/or relationship-building with varying levels of participation leading to impact (@fig-impact-model2).
+
+::: {layout="[[1,1], [1]]" layout-valign="center"}
+
+![Linear model of research impact](../images/impact-model1.png){#fig-impact-model1}
+
+![Relationship model of research impact](../images/impact-model2.png){#fig-impact-model2}
+
+Source: Adapted from @newman_rethinking_2019
+
+:::
+
+From more linear models came a cyclical process of knowledge generation and policymaking with impact at the center of the process (@fig-impact-model3). This model however, didn't take into account overarching research governance systems in the national context and globally.
+
+::: {layout="[[1], [1]]"}
+
+![Cyclical systems model of research](../images/impact-model3.png){#fig-impact-model3}
+
+Source: Adapted from @newman_rethinking_2019
+
+:::
+
+
+A more recent model (@fig-impact-model4) recognises the complexity of systems involved in knowledge generation and mobilisation.
+
+::: {layout="[[1], [1]]"}
+
+![Embedded systems model of research impact](../images/impact-model4.png){#fig-impact-model4 }
+
+Source: Adapted from @newman_rethinking_2019
+
+:::
+
+The first three models are heavily anchored in the academic research model and partnerships and engagement may or may not be deemed necessary and the level of participation may generally be from the point of view of utility (partnerships as means to an end). The fourth model, on the other hand, necessitates meaningful engagement with the various layers of context and systems in which the research is embedded in including the politics and power dynamics involved in the overall process of research agenda setting and funding allocations.
+
+Such process is only possible within a collaborative paradigm that is fair and equitable, that recognises the priorities of people in the global South, including local academics, practitioners, and non-governmental organisations, throughout the entire research and policymaking process. These stakeholders possess deep insights into the types of impact needed, local realities, and the complexities of achieving meaningful development and health outcomes.
+
+### From partnerships to transformative collaboration {#sec-transformative-collaboration}
+
+Acknowledging the limitations of the *partnerships approach* in programming and in research and the complexity of various contexts in which these partnerships are embedded, a burgeoning movement of theory and practice is shifting towards a more **transformative collaboration** instead (see @nte-africa-charter). In this paradigm, the focus is not just in setting guidelines and checklists to make partnerships fairer and more equitable within existing research structures and systems. Instead, transformative collaboration critically assesses the wider research structures and systems that currently exists, understands the hierarchies and power dynamics that exist, and questions the current approaches and levels of research participation of all relevant stakeholders [@fransman_rethinking_2019; @fransman_beyond_2021; @aboderin_beyond_2023].
+
+::: {#nte-africa-charter .callout-note}
+
+## Africa Charter for Transformative Research Collaborations
+
+The Africa Charter for Transformative Research Collaborations is a framework that aims to guide and promote equitable, sustainable, and impactful research partnerships across the African continent. It focuses on creating a transformative research environment that prioritises African-led, context-specific solutions to development challenges. The Charter advocates for the inclusion of African researchers and institutions at the forefront of research design, implementation, and decision-making processes. It emphasises the need for research that is locally relevant, benefits African communities, and is ethically sound. Additionally, the Charter calls for the fair sharing of resources, data, and intellectual property and aims to strengthen the capacity of African research systems through collaborative, transparent, and mutually respectful partnerships. The overarching goal is to ensure that research collaborations contribute to the continent’s long-term social, economic, and scientific development.
+
+Source: @gebremariam_beyond_2023; @noauthor_africa_2023
+
+:::
+
+## Issues and challenges
+
+@modlin_towards_2023 identified eight key issues for consideration in research partnership equity in the context of clinical trials. With clinical trials being the most common type of health research utilising transboundary partnerships, we deemed it important to engage with the identified issues and challenges by researchers from this field.
+
+### Epistemic structures
+
+Valid scientific research requires not only resources but also access to systems that shape and share knowledge. Despite open-access growth, much health data remains concentrated in HICs, leaving LMICs dependent on HICs for access. LMIC researchers often collect data but lack a role in data analysis and publication, limiting their contributions (see @nte-epi1). 
+
+::: {#nte-epi1 .callout-note}
+
+## Data collection from LMICs to analysis in HICs
+
+An evaluation of international randomised clinical trials found that across **305 clinical trials** published from 2013 to 2021 from The *BMJ*, *BMJ Global Health*, the *Journal of the American Medical Association*, the *Lancet*, *Lancet Global Health* and the *New England Journal of Medicine*, data flowed exclusively from *collection in LMICs to analysis in HICs* for **73% of studies** [@kwok_data_2022].
+
+:::
+
+This reliance can skew research to reflect HIC perspectives, overlooking how local culture and context affect data interpretation, potentially reducing the validity of the research outcomes (see @nte-epi2).
+
+::: {#nte-epi2 .callout-note}
+
+## Epistemic injustice in research
+
+Local knowledge and priorities in LMICs are often sidelined in favor of Western or globally dominant perspectives. This imbalance, known as **credibility deficit** undermines local experts by prioritising Western audiences, often disregarding culturally relevant interpretations. When research caters primarily to elite or Western journals, local communities face reduced access and trust in the findings. Such exclusion erodes knowledge diversity, perpetuates misunderstandings, and discourages marginalised groups from participating in research that affects them directly.
+
+::: {layout="[[1], [1]]"}
+
+![Example of credibility deficit and interpretive marginalisation](../images/credibility-deficit.jpg){#fig-credibility-deficit width="450px"}
+
+Source: @bhakuni_epistemic_2021
+
+:::
+
+:::
+
+### Funding
+
+Power imbalances in research partnerships between HICs and LMICs often stem from funding disparities. Flow of research funding predominantly move from governments, businesses, and private foundations or individuals from HICs to Global South regions (see @nte-funding1).
+
+::: {#nte-funding1 .callout-note}
+
+## Flow of global health policies and programmes funding
+
+Global health initiatives rely on funding primarily from three sources: high-income country governments, businesses, and private foundations or individuals. This funding is directed to Global South regions via global health institutions, including UN multilateral organisations, bilateral agencies (such as USAID and Grand Challenges Canada), partnerships (like the Global Fund and Gavi), and international NGOs (e.g., Save the Children and PATH). These channels play a crucial role in supporting health programs across low- and middle-income countries.
+
+::: {layout="[[1], [1]]"}
+
+![Diagram of funding flow for global health policies and programmes](../images/global_health_funding_flow.png){#fig-funding-flow width="75%"}
+
+Source: @olusanya_transforming_2021
+
+:::
+
+:::
+
+As an example, the Pandemic PACT dataset - a living mapping review of global  research funding for infectious diseases with a pandemic  potential [@seminog_protocol_2024] - which contains information on $15 billion in research funding across 19,172 grants, from 349 global funders reveals the flow of funding from research funder to research institution to research implementation country (see @nte-funding2).
+
+::: {#nte-funding2 .callout-note}
+
+## Current flow of funding on pandemic-related research
+
+![Regional flow of research grants for infectious diseases with a pandemic potential](../images/regional-flow-of-grants.png){#fig-regional-funding-flow}
+
+:::
+
+Research priorities are generally driven by HIC funders, who may overlook LMIC-specific needs like poverty and inadequate healthcare infrastructure. HICs frequently control partnership structures and resources, compelling LMIC researchers to align with external agendas for funding access. This setup limits LMIC influence in agenda-setting and sustains inequalities in the partnership process.
+
+### Ethics oversight
+
+Some LMICs have developed strong research ethics and regulatory oversight mechanisms, though many still lack robust infrastructure compared to high-income countries. This imbalance in research ethics oversight can be exploited through the export of research practices deemed unethical in HICs to less regulated research setting in LMICs (see @nte-ethics1).  
+
+::: {#nte-ethics1 .callout-note}
+
+## Ethics dumping
+
+The term is said to have been introduced by the Science with and for Society Unit of the European Commission: 
+
+> “Due to the progressive globalisation of research activities, the risk is higher that research with sensitive ethical issues is conducted by European organisations outside the EU in a way that would not be accepted in Europe from an ethical point of view. This exportation of these non-compliant research practices is called ethics dumping.”
+
+Source: @european_commission_horizon_nodate
+
+:::
+
+Efforts to improve this include enhancing the capacity of research ethics committees (RECs) and increasing the role of community advisory boards to address complex ethical concerns in LMIC health research.
+
+### Regulatory oversight
+
+Regulatory oversight in transnational research varies widely, often applying universal standards that may not suit all study sites. Some LMIC regulators impose strict requirements, partly to avoid being seen as "outsourced" locations for research that would be challenging in high-income countries. While protecting participants is the goal, these regulations can hinder research, as seen in India (see @nte-regulatory1) and Chile, where trial numbers dropped after stricter rules have been set in place by the respective national governments. This dynamic highlights the power imbalance where funders can relocate research, limiting LMICs’ flexibility in global health research.
+
+::: {#nte-regulatory1 .callout-note}
+
+## India's regulatory policy to protect research participants
+
+India’s pool of skilled, multilingual professionals with relevant research expertise, its less expensive research operations, and its large patient population with a broad range of communicable and non-communicable diseases are key reasons for the country's prominence in research and generic drug production.
+
+Despite these strengths in research, ethical concerns persist, including allegations of exploitative enrollment of vulnerable participants, insufficient oversight, and inconsistent medical care or compensation for those injured during studies. A report for India’s Supreme Court highlighted 2,644 research-related deaths between 2005 and 2012, with 80 deaths directly linked to the studies.
+
+To address ethical concerns in clinical research, India introduced the "Drugs and Cosmetics (First Amendment) Rules 2013." Key features include compensation for research injuries and mandatory registration of ethics review committees to strengthen oversight and integrity. As of July 2013, around 500 ethics committees were approved, with additional measures for transparency and annual trial inspections. These policies align with international guidelines and aim to protect participants in clinical trials.
+
+India’s recent policy changes have sharply reduced clinical trial applications, with an estimated $150-200 million loss, potentially affecting access to new drugs and health products. The Indian regulatory body now requires local efficacy data, impacting marketing approvals and public health research. As a consequence, over 35 U.S.-funded research projects were suspended, primarily focused on public health rather than product development. This situation may discourage global health research in India as international trials remain highly competitive.
+
+Source: @sugarman_indias_2013
+
+:::
+
+### Leadership
+
+In collaborative trials, leadership often defaults to HIC partners due to their resource advantages, which can make LMIC involvement seem tokenistic unless roles are equitably defined (see @nte-leadership1). Localised epidemics especially benefit from LMIC-led insights. Although institutional barriers can hinder leadership transfer in long-term projects, prioritisation of LMIC leadership through intentional training and responsibility-sharing efforts are ways of mitigating this.
+
+::: {#nte-leadership1 .callout-note}
+
+## The little brother effect in African biosciences
+
+> "... some authors have recorded how collaborators in HICs have dictated what needs to be done in research collaborations and in some cases have said their African collaborators were hired to do research and should implement as requested."
+
+Source: @munung_equity_2017
+
+This has been called the **little brother effect** in African biosciences in that north-south partnerships mirror paternalism and colonial hegemony despite initial display of good intentions by HIC partners at the beginning [@okeke_african_2016].
+
+:::
+
+### Post-trial access to interventions, data, and specimens
+
+Post-trial access (PTA) in collaborative research includes ensuring both participant access to beneficial interventions and LMIC research partners’ access to study data and specimens. Ideally, PTA terms are agreed upon before trials begin, though practical challenges often limit access for LMIC partners. The issue, rooted in global distributive justice, requires broader input from local officials (see @nte-pta1). Ethical concerns in data sharing - such as informed consent and data security - highlight the need for bidirectional access and underscore the risk of imposing HIC-centric health metrics, potentially misaligning with LMIC needs.
+
+::: {#nte-pta1 .callout-note}
+
+## Responsibilities for post-trial access
+
+A study conducted in a rural sub-district in KwaZulu-Natal province, South Africa investigating the views of study participants on post-trial access to treatment produced a case study of a universal test and treat (UTT) trial conducted from 2012 to 2016, which utilised antiretroviral treatment (ART) as a prevention strategy to reduce HIV transmission risk in specially designed trial clinics [@ngwenya_investigation_2022].
+
+A key finding elucidated by the investigators was on the various research stakeholders' understanding and conceptualisation of their responsibility with regard to post-trial access. Many researchers believe the government, specifically the National Department of Health (DoH), has a legal duty to improve health and healthcare delivery in general which supports the DoH’s inclusion as the key government stakeholder in ensuring continued access to treatment (PTA) for the trial participants. On the other hand, DoH stakeholders shared sentiments on power dynamics between researchers and the government that could potentially lead to pressurised agreement of PTA so that trial participants are able to access the treatment benefits now even if post-trial access will most likely be a challenging task to ensure for the DoH.
+
+:::
+
+### Knowledge translation and dissemination
+
+Health research only achieves impact when translated into practice, systems, or policy. However, few knowledge translation models address health equity issue and power dynamics are often under-represented (see @nte-kta1).
+
+::: {#nte-kta1 .callout-note}
+
+## Knowledge-to-action cycle
+
+A review of international literature on knowledge translation models found that few models explicitly or implicitly addressed health equity issues [@davison_critical_2015]. Power dynamics are often under-represented in most knowledge translation frameworks but could be significantly enhanced by critically examining underlying assumptions and their impact on the entire knowledge-to-action cycle [@esmail_scoping_2020].
+
+:::
+
+Partners must present findings in accessible ways for healthcare leaders, staff, participants, communities, and policymakers. This includes addressing potential miscommunication or misinformation about research results to ensure they are understood and applied effectively. Research that has limited utility for LMIC settings doesn't lead to meaningful outcomes for the community.
+
+### Research capacity strengthening and maintenance
+
+Achieving equity in transnational research requires focusing on capacity strengthening for sustainable research capabilities, especially for LMIC partners. While all partners should enhance skills, HICs’ greater resources suggest prioritising LMIC capacity building. This approach includes HICs fostering allyship by understanding LMIC contexts and internal dynamics. Effective capacity building relies on addressing specific needs, fostering trust, and allowing time to integrate research into policy and practice as partnerships grow and mature.
+
+## Frameworks and guidelines to fair and equitable research collaboration {#sec-frameworks-guidelines}
+
+### Rethinking Research Collaborative {#sec-rrc}
+
+The [Rethinking Research Collaborative (RRC)](https://rethinkingresearchcollaborative.com/) is a network of organisations, researchers, and practitioners focused on improving equity and fairness in international research partnerships. It aims to make research more inclusive, accessible, and impactful by addressing power imbalances, prioritising local perspectives, and encouraging collaboration that truly benefits marginalised communities. The RRC provides resources, guidelines, and best practices to foster more ethical, mutual, and effective research relationships between high-income and low- and middle-income country partners.
+
+Through the collaborative's research, it has put forward the **eight principles of fair and equitable research partnership**.
+
+::: {#nte-eight-principles .callout-note}
+
+## Eight principles of fair and equitable research partnership
+
+**1. Put poverty first.**
+
+Situate research impact pathways within existing practice-based development work/impact systems.
+
+**2. Critically engage with contexts.**
+
+Consider the multiple contexts of research and who is represented across the partnership and research system, reflecting on implications for how impact is understood, where impact might be felt and given meaning.
+
+**3. Redress evidence hierarchies.**
+
+Recognise the different knowledge and evidence preferences/needs of the actors involved and ensure spaces are created to shift assumptions on what types of evidence, and whose knowledge can create impact and how.
+
+**4. Adapt and respond.**
+
+Complex and rapidly changing development contexts require responsive and adaptive practice. Learn from the vast experience of practitioners who work adaptively and over the long term in specific contexts.
+
+**5. Respect diversity.**
+
+Bringing together the diverse actors required for meaningful impact means valuing difference. Participatory and creative methods can help partners to understand each other and negotiate differences.
+
+**6. Commit to transparency.**
+
+To build trust and ensure the commitment needed to maximise impact, all processes (including budgets) must be open. Create impact in the research system to ensure transparency moves beyond legal agreements to influence behaviours, expectations and ways of relating.
+
+**7. Invest in the relationship.**
+
+To achieve meaningful impact, relationships must be strong and sustained. This involves thinking about shared visions and agendas beyond the individual project and funding adequate time to understand each other and build trust.
+
+**8. Keep learning.**
+
+To develop shared agendas for change and be able to create impact, invest time in individual reflection and ensure processes to feed learning back into the wider partnership and research systems.
+
+Source: @newman_rethinking_2019
+
+:::
+
+### Swiss Commission for Research Partnerships with Developing Countries (KFPE) {#sec-kfpe}
+
+The [Swiss Commission for Research Partnerships with Developing Countries (KFPE)](https://kfpe.scnat.ch/en) is an organisation that promotes and supports research partnerships between European institutions and those in developing countries. Established under the [Swiss Academy of Sciences (SCNAT)](https://scnat.ch/en), KFPE focuses on facilitating equitable and sustainable international research collaborations that address global challenges, particularly in areas of sustainable development, poverty reduction, and capacity-building.
+
+KFPE is known for its **11 Principles for research partnerships**, which provide guidance on fostering mutual respect, shared ownership, and long-term benefits in international collaborations. These principles aim to ensure that partnerships are ethically sound, address relevant local needs, and contribute to capacity building in partner countries.
+
+::: {#nte-kfpe-eleven-principles .callout-note}
+
+## 11 Principles for transboundary research partnerships
+
+**1. Set the agenda together**
+
+Research cooperation between institutions can vary widely, from informal information exchange to long-term collaborations. Experience in North-South partnerships shows that achieving ambitious goals in close collaborations requires clear mutual agreement on purpose and objectives. Effective, high-quality research with shared goals involves all parties from the start, including key stakeholders. However, this is challenging in practice, as true equality - equal funding, scientific capacity, and interests - between partners is rare. Although asymmetry is inevitable, its negative effects can be minimised by jointly deciding on research questions, approaches, and methods, fostering equity, shared ownership, and trust in the collaboration.
+
+**2. Interact with stakeholders**
+
+Researchers should ideally engage with key stakeholders early in the research process - during the formulation of research questions or even in research activities - rather than waiting until results are published. Early involvement makes research more relevant to political and societal issues and more likely to be used. However, engaging with stakeholders is time-intensive and requires careful planning. Researchers might consider partnering with brokers and facilitators if they lack the skills for effective stakeholder engagement. Additionally, their focus should remain on generating knowledge rather than solely on dissemination.
+
+**3. Clarify responsibilities**
+
+Partnerships are formed when working together yields more benefits than working alone. While achieving a shared goal doesn’t require each step to be collaborative, partners should contribute based on their strengths. Clear division of labor requires assigning responsibilities, rights, and obligations. However, certain responsibilities, such as external accountability and ethical considerations, must be shared by all partners. Jointly setting the research agenda and reflecting on experiences fosters mutual responsibility, enabling shared learning and the creation of innovative knowledge.
+
+**4. Account to beneficiaries**
+
+Traditional *upward accountability* to funders alone is common in research collaboration but insufficient, as it overlooks the broader impact on society and science. Effective accountability also involves *downward accountability* to beneficiaries, ensuring that research meets their needs and expectations. This approach fosters stronger partnerships, generates new research questions, and promotes broader dissemination of results. However, diverse relationships in research partnerships create complex obligations. To operationalise accountability, partners should jointly assess expected outcomes and discuss each partner’s specific commitments and responsibilities.
+
+**5. Promote mutual learning**
+
+Research projects benefit from the diverse contextual and systemic knowledge each partner brings. Leveraging these synergies can greatly enhance knowledge, insights, and the project’s overall success. A willingness among all parties to engage in dialogue and learning is essential for creating institutional value. Effective learning processes also require supportive tools and structures. Monitoring and evaluation systems help track achievements and serve as a *navigation tool* for improving collaboration, emphasising the importance of working and growing together.
+
+**6. Enhance capacities**
+
+Research partnerships have shifted from a one-way transfer of knowledge from the North to the South to a mutual exchange aimed at increasing knowledge, skills, and capacity for all involved. These partnerships now focus on building solutions to global challenges while fostering capacity among stakeholders and junior researchers. There is a growing emphasis on enhancing communication skills and engaging diverse stakeholders. Both Northern and Southern research communities recognise the need to fully utilise the scientific potential of these partnerships, with Northern researchers also benefiting by strengthening their own capacities through collaboration.
+
+**7. Share data and networks**
+
+Transparency and open information flow are essential in research partnerships focused on socially relevant outcomes. However, sharing information can sometimes result in tangible losses, creating challenges for partnerships. North-South partnerships typically benefit from a two-way exchange, as both sides bring essential information and relationships to the project’s success. Establishing a *give and take* system can create a win-win situation, and incentive structures are needed to encourage transparency - rewarding those who openly share information with reciprocal benefits.
+
+**8. Disseminate results**
+
+All research builds on existing knowledge, adding new insights that expand the knowledge base. A key challenge is making these insights accessible and relevant to both the research community and other potential users. Researchers must disseminate findings in ways that are easy to locate, understand, and apply, which can be particularly complex in transdisciplinary and cross-border research. This process requires translating findings into suitable formats and languages for diverse audiences and choosing effective communication channels, including journals, media, conferences, and possibly using facilitators or brokers to enhance reach.
+
+**9. Pool profits and merits**
+
+Research knowledge produced in transboundary partnerships is typically a public good. Researchers benefit from publishing their findings and gaining expert recognition, and these benefits should be shared equally among all partners, including equal acknowledgment in authorship and a mutually beneficial choice of publication venues. Conflicts may arise over profit or intellectual property rights, especially when multiple parties have claims on the same work. To prevent disputes, it is crucial to establish clear rules about rights and benefits early in the partnership.
+
+**10. Apply results**
+
+Many North-South research partnerships focus on result- or implementation-oriented research, where scientific findings must be followed by practical application. This could involve introducing new technologies or advocating for policy changes based on research recommendations. Other stakeholders such as non-governmental organisation or civil society organisations can play key roles in implementation. Successful application requires presenting results in a way that is meaningful to users and speaking their language. The earlier researchers engage with potential users and supporting institutions, the more likely the results will have a positive impact.
+
+**11. Secure outcomes**
+
+Many North-South partnerships are short-term and often result in lost achievements, particularly in the South, where capacity is underutilised and researchers may migrate (*brain drain*). To prevent this, efforts should be made before the partnership ends to secure progress, such as integrating into research networks, including South-South cooperation, and focusing on capacity development and publications. Most importantly, governments and international organisations must help guide research in the South toward sustainability, reducing marginalisation and ensuring long-term impact.
+
+Source: @stockli_guide_2018
+
+:::
+
+### Research Fairness Initiative {#sec-rfi}
+
+The [Research Fairness Initiative (RFI)](https://rfi.cohred.org/) is a framework designed to assess and improve the fairness of research partnerships, particularly those involving the Global South. It was developed to address the power imbalances and inequalities that often exist in international research collaborations. The RFI aims to promote fair, transparent, and equitable partnerships by focusing on key areas such as:
+
+1. **Fairness in Partnership**: Ensuring that all partners, regardless of their geographical or institutional location, have equal rights and responsibilities in the research process.
+
+2. **Mutual Benefit**: Ensuring that the benefits of the research, including knowledge, skills, and resources, are shared equitably among all stakeholders.
+
+3. **Respect for Local Contexts**: Recognising and valuing the knowledge, priorities, and contexts of researchers and communities in the Global South.
+
+4. **Capacity Building**: Supporting the development of research capacity in the Global South, so that local institutions and researchers can lead and sustain research initiatives.
+
+The RFI provides tools and guidelines for institutions to assess their research practices and policies, with a focus on improving equity, participation, and mutual benefit in international collaborations. By using the RFI guides, organisations can identify gaps in fairness and work to address them, ultimately fostering more inclusive and impactful research partnerships.
+
+::: {#nte-rfi-domains .callout-note}
+
+## Research Fairness Initiative Domains, Topics, and Indicators
+
+### Domain 1: Fairness of Opportunity
+
+**Topic 1: Relevance to Communities in which Research is done**
+
+* Indicator 1.1.1: Research priorities in communities where research is being conducted
+
+* Indicator 1.1.2: Actions if there are no research priorities
+
+* Indicator 1.1.3: Justification to research low priority topics
+
+
+**Topic 2: Early Engagement of Partners**
+
+* Indicator 1.2.1: Relationship between the "main/lead/sponsoring" and "other" partners
+
+* Indicator 1.2.2: SOPs for partner inclusion in study design
+
+* Indicator 1.2.3: SOPs for supportive actions to partners
+
+**Topic 3: Making Contributions of Partners Explicit**
+
+* Indicator 1.3.1: Role clarification in research partnerships
+
+* Indicator 1.3.2: SOPs for conflict resolution
+
+* Indicator 1.3.3: Making potential impact explicit before starting research
+
+**Topic 4: Ensuring That Matching and Other Co-Financing Mechanisms Do Not Undermine Opportunities for Fair Participation of All Partners**
+
+* Indicator 1.4.1: Equal co-financing
+
+* Indicator 1.4.2: Alternatives to equal co-financing
+
+* Indicator 1.4.3: Research outside national priorities and co-financing
+
+**Topic 5: Recognition of Unequal Research Management Capacities Between Partners and Providing for Appropriate Corrective Measures**
+
+* Indicator 1.5.1: Research Management Capacity
+
+* Indicator 1.5.2: Financial Management Capacity
+
+* Indicator 1.5.3: Contracting and Contract Negotiation capacity
+
+### Domain 2: Fair Process
+
+**Topic 6: Minimising Negative Impact of Research Programmes on Systems**
+
+* Indicator 2.6.1: Assessing potential harm of research
+
+* Indicator 2.6.2: Reducing negative impact of research
+
+* Indicator 2.6.3: Compensation for unintended (negative) consequences of research
+
+**Topic 7: Fair Local Hiring, Training and Sourcing**
+
+* Indicator 2.7.1: Local staffing
+
+* Indicator 2.7.2: Local sourcing of consumables and services
+
+* Indicator 2.7.3: Support for local capacity development
+
+**Topic 8: Respect for Authority of Local Ethics Review Systems**
+
+* Indicator 2.8.1: Research Ethics Approval
+
+* Indicator 2.8.2: Supporting local Research Ethics Review capacity
+
+* Indicator 2.8.3: Enabling access to global expertise
+
+**Topic 9: Data Ownership, Storage, Access and Use**
+
+* Indicator 2.9.1: Data Ownership Agreements
+
+* Indicator 2.9.2: Material Transfer Agreements
+
+* Indicator 2.9.3: Rights of Use of Data for Publication
+
+**Topic 10: Encouraging Full Cost Recovery Budgeting and Compensation**
+
+* Indicator 2.10.1: Full Cost Recovery Budgeting
+
+* Indicator 2.10.2: Improving/Standardising Budgeting
+
+* Indicator 2.10.3: External Financial Audit
+
+### Domain 3: Fair Sharing of Benefits, Costs & Outcomes
+
+**Topic 11: Research System Capacities**
+
+* Indicator 3.11.1: Training
+
+* Indicator 3.11.2: Research Management
+
+* Indicator 3.11.3: Increase (Predictable) Funding
+
+**Topic 12: Intellectual Property Rights and Tech Transfer**
+
+* Indicator 3.12.1: Technology Transfer
+
+* Indicator 3.12.2L: Sharing Intellectual Property Rights
+
+* Indicator 3.12.3: Contracting Support for IPR
+
+**Topic 13: Innovation System Capacities**
+
+* Indicator 3.13.1: Localising innovation
+
+* Indicator 3.13.2: Financing to link Research with Innovation
+
+* Indicator 3.13.3: Support Innovation Culture
+
+**Topic 14: Due Diligence**
+
+* Indicator 3.14.1: Promoting participation of women in science and innovation
+
+* Indicator 3.14.2: Reducing negative environmental impact
+
+* Indicator 3.14.3: Achieving SDGs
+
+**Topic 15: Expectation of All Partners to Adhere to a Best Practice Standard in Research Collaboration**
+
+* Indicator 3.15.1: Partner Requirements for Fair Research Partnerships
+
+* Indicator 3.15.2: Sponsor Requirements for Fair Research Partnerships
+
+* Indicator 3.15.3: Fair Research Contracting
+
+Source: @ijsselmuiden_research_nodate
+
+:::
+
+
+### TRUST Equitable Research Partnerships {#sec-trust}
+
+[TRUST Equitable Research Partnerships](https://www.globalcodeofconduct.org/) is an initiative designed to promote fair, transparent, and accountable collaborations between researchers and institutions in the Global South and Global North. The **TRUST Code** (see @nte-trust-code) focuses on ensuring that international research partnerships are more equitable, inclusive, and respectful of all parties involved, particularly researchers and communities in the Global South.
+
+::: {#nte-trust-code .callout-note}
+
+## A summary of the key principles of the TRUST Code
+
+**Fairness**
+
+* Research should be locally relevant and developed in collaboration with local partners to avoid imposing unnecessary burdens.
+
+* Local communities and participants should be involved throughout the research process, ensuring their perspectives are fairly represented, and findings should be communicated in a meaningful and understandable way. 
+
+* Local researchers should be included in all stages of research, including design, implementation, data ownership, intellectual property, and authorship. 
+
+* Access to resources and knowledge should be granted through free, prior, and informed consent, with formal agreements co-developed with custodians
+
+* Benefit-sharing from biological materials and traditional knowledge should be transparent, culturally appropriate, and include all stakeholders, with attention to power imbalances. 
+
+* Finally, local research support systems should be fairly compensated for their contributions.
+
+**Respect**
+
+* Researchers should explore potential cultural sensitivities in advance with local communities and participants to respect customary practices and ensure that research is voluntary, not imposing external ethical values. 
+
+* If researchers cannot align their methods with local acceptability, the research should not proceed. 
+
+* Community assent may be necessary, obtained through local structures, in addition to individual consent, reflecting respect for the community. 
+
+* Local ethics review should be sought wherever possible, and research projects must be approved by the host country's ethics committee, even if approval has been granted in a high-income setting. 
+
+* Researchers from high-income countries must show respect to the ethics committees in the host country.
+
+**Care**
+
+* Informed consent procedures should be adapted to local needs to ensure genuine understanding and well-informed decision-making. 
+
+* A clear procedure for feedback, complaints, or misconduct allegations must be established from the outset, allowing all participants and partners to voice concerns. 
+
+* Research that is restricted or prohibited in high-income settings should not be conducted in lower-income settings unless justified by specific local conditions, with transparent exceptions made. 
+
+* Special measures must be taken to ensure the safety and wellbeing of participants in sensitive research areas. 
+
+* The impact of research on local resources should be assessed in advance, and its implications discussed with local communities. 
+
+* Animal and environmental protection standards should align with higher standards if local regulations are inadequate. 
+
+* Tailored risk management plans should be in place for research involving health, safety, or security risks to researchers.
+
+**Honesty**
+
+* Collaborators should have a clear understanding of their roles, responsibilities, and conduct throughout the research process, including study design, implementation, review, and dissemination, with capacity-building for local researchers incorporated. 
+
+* Information must be presented honestly and clearly, using plain language and appropriate local languages, ensuring that barriers such as illiteracy or language do not hinder understanding. 
+
+* Corruption and bribery are unacceptable in any research context. 
+
+* Researchers must adhere to high data protection standards, even in settings with lower local standards, paying special attention to participants at risk of stigmatisation, discrimination, or privacy breaches.
+
+Source: @trust_trust_2018
+
+:::
+
+The TRUST Code aims to challenge and change the historically unequal dynamics of research partnerships, where Northern institutions often hold more power and control. By following the TRUST principles, organisations and researchers can create partnerships that are not only scientifically rigorous but also ethically sound, addressing global challenges in ways that benefit all involved.
+
+### Canadian Coalition for Global Health Research {#sec-ccghr}
+
+The CCGHR principles for global health research (see @fig-ccghr-principles) emphasise equity, justice, and respect for local contexts, ensuring that research addresses health disparities and benefits all partners fairly. Collaboration is central, with a focus on mutual respect and active participation from local communities and stakeholders throughout the research process. Ethical conduct is paramount, including informed consent, confidentiality, and transparency, while ensuring sustainability in terms of health impact and capacity-building. Researchers must be accountable to all involved parties, and the research should ultimately benefit local communities by addressing their specific needs and improving health outcomes.
+
+![The CCGHR principles for global health research](../images/ccghr-principles.jpg){#fig-ccghr-principles}
+
+Source: @plamondon_ccghr_2019
+
+
+### UKCDR and ESSENCE Good Practice Document {#sec-ukcdr-essence}
+
+Transforming the global research partnership ecosystem to increase equity and restore balance requires continuous action and reflection, focusing on balancing flexibility and equity to foster trust and respect among all partners. The [UKCDR](https://ukcdr.org.uk/) and [ESSENCE on Health Research](https://tdr.who.int/groups/essence-on-health-research) draws on the experiences of funders, research organizations, and researchers from diverse income countries in their *Four Approaches to Supporting Equitable Research Partnerships* [@essence_on_health_research_four_2022]. It outlines four approaches (see @fig-four-approaches) to applying equitable partnership principles in multi-country research collaborations, identifying potential equity barriers and offering practical solutions. This guideline emphasises the importance of both trust-building strategies and funding procedures and contracts in strengthening equity in research partnerships.
+
+::: {layout="[[1], [1]]"}
+
+![Approaches to supporting equitable research partnerships](../images/approaches-equitable-partnerships.png){#fig-four-approaches}
+
+Source: @essence_on_health_research_four_2022
+
+:::
+
+### Knowledge Equity Network {#sec-ken}
+
+The [Knowledge Equity Network (KEN)](https://knowledgeequitynetwork.org/) is a global initiative aimed at promoting equitable access to knowledge and addressing disparities in the global research and development ecosystem. It focuses on ensuring that knowledge creation, sharing, and application are inclusive, accessible, and distributed fairly among all regions, especially in low- and middle-income countries.
+
+KEN works to challenge existing power imbalances in the production and dissemination of knowledge, advocating for more equitable partnerships between researchers and institutions across the globe. This includes emphasising the importance of local knowledge and perspectives in research and policy-making, alongside promoting inclusive practices and collaborative models that recognise the expertise and contributions of diverse communities.
+
+The network brings together organisations, funders, and researchers to share best practices, build capacity, and create more inclusive research partnerships that address global challenges in a way that is fair, sustainable, and mutually beneficial.
+
+::: {#nte-ken-principles .callout-note}
+
+## Knowledge Equity Network principles
+
+**Universal:** the Higher Education system is for the good of all, educating the workforce and leaders of tomorrow, enriching cultures, improving health and wellbeing, and driving innovation and entrepreneurship.
+
+**Collaborative:** the need to prioritise collaboration over competition, working in inclusive, transdisciplinary partnerships with generosity and compassion.
+
+**Inclusive:** the need to consider all potential beneficiaries of higher education, and the knowledge it creates, enabling practices that provide equal and fair access to all, leading to equitable outcomes.
+
+**Sustainable:** the need to carry out these practices in a way that is sustainable for providers, funders, and participants.
+
+Source: @knowledge_equity_network_declaration_nodate
+
+:::
+
+### Equitable Research Partnerships Toolkit {#sec-equitable-toolkit}
+
+The [Association of Commonwealth Universities (ACU)](https://www.acu.ac.uk/) [Equitable Research Partnerships Toolkit](https://www.acu.ac.uk/our-work/projects-and-programmes/equitable-research-partnerships-toolkit/) is a resource designed to help researchers, institutions, and funders build and maintain more equitable and inclusive research partnerships, particularly in the context of international collaborations. The toolkit provides practical guidance and strategies to address the power imbalances that often exist in global research partnerships, where institutions and researchers from low- and middle-income countries can face disadvantages.
+
+The toolkit is part of the ACU’s ongoing efforts to promote more inclusive and fair research practices within the Commonwealth and beyond, aligning with broader goals of knowledge equity and international collaboration.
+
+## Bibliography
+
+
+
