@@ -20,7 +20,7 @@ jobs:
       - name: Install system dependencies
         run: |
           apt-get update && apt-get install -y --no-install-recommends \
-          libxt6 libglpk-dev gh
+          libxt6 libglpk-dev gh curl jq
           
       - name: Trust git repo
         run: |
