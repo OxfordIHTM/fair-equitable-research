@@ -1,0 +1,50 @@
+name: deploy ferc scoping review report
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  deploy-ferc-scoping-review-report:
+    runs-on: ubuntu-latest
+    container: rocker/tidyverse:4.4.2
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      GIT_CRYPT_KEY64: ${{ secrets.GIT_CRYPT_KEY64 }}
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install system dependencies
+        run: |
+          apt-get update && apt-get install -y --no-install-recommends \
+          libxt6 libglpk-dev gh curl jq
+          
+      - name: Trust git repo
+        run: |
+          git config --global --add safe.directory /__w/fair-equitable-research/fair-equitable-research
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+  
+      - name: Install tinytex
+        run: quarto install tinytex
+
+      - name: Install packages from renv.lock (with cache)
+        if: ${{ !env.ACT }}  
+        uses: r-lib/actions/setup-renv@v2
+        with:
+          cache-version: 2
+
+      - name: Install packages from renv.lock (local, no cache)
+        if: ${{ env.ACT }}  
+        run: |
+          renv::restore()
+        shell: Rscript {0}
+        
+      - name: Run workflow
+        run: |
+          targets::tar_make(ferc_scoping_review_report_url)
+        shell: Rscript {0}
+        
+        
