@@ -46,5 +46,12 @@ jobs:
         run: |
           targets::tar_make(ferc_scoping_review_report_url)
         shell: Rscript {0}
-        
+
+      - name: Commit and push files
+        run: |
+          git config --global user.email "ernest@guevarra.io"
+          git config --global user.name "ernestguevarra"
+          git add .
+          git diff-index --quiet HEAD || git commit -m "update ihtm feedback report"
+          git push
         
