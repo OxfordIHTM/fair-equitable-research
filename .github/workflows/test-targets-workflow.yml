@@ -46,7 +46,7 @@ jobs:
         
       - name: Run workflow
         run: |
-          targets::tar_make()
+          targets::tar_make(ferc_scoping_review_report)
         shell: Rscript {0}
         
         

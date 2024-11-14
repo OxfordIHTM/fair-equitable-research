@@ -77,7 +77,10 @@ report_targets <- tar_plan(
 
 ### Deploy targets
 deploy_targets <- tar_plan(
-  
+  tar_target(
+    name = ferc_scoping_review_url,
+    command = deploy_report(ferc_scoping_review_report)
+  )
 )
 
 
