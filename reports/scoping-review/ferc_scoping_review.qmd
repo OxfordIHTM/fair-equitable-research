@@ -9,35 +9,6 @@ subtitle: A Scoping Review
 #       - name: Centre for Tropical Medicine and Global Health, Nuffield Department of Medicine, University of Oxford
 #         city: Oxford
 date: "`r format(Sys.Date(), '%d %B %Y')`"
-bibliography: ../references.bib
-format: 
-  html:
-    toc: true
-    toc-location: left
-    embed-resources: true
-    grid:
-      body-width: 900px
-      margin-width: 300px
-    code-tools:
-      source: https://github.com/OxfordIHTM/fair-equitable-research/blob/main/reports/ferc_scoping_review.qmd
-  # docx:
-  #   toc: true
-  #   toc-depth: 3
-  #   toc-title: Table of Contents
-  #   number-sections: true
-  #   number-depth: 3
-  #   reference-doc: ../reference_doc.docx
-  #   highlight-style: breeze
-  pdf:
-    documentclass: scrartcl
-    papersize: a4
-    toc: true
-    toc-title: Contents
-    lof: true
-    lot: true
-    number-sections: true
-    number-depth: 3
-    highlight-style: breeze
 ---
 
 ```{r setup}

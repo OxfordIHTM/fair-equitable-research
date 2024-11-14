@@ -68,9 +68,16 @@ output_targets <- tar_plan(
 
 ### Reporting targets
 report_targets <- tar_plan(
-  tar_quarto(
+  # tar_quarto(
+  #   name = ferc_scoping_review_report,
+  #   path = "reports/scoping-review/ferc_scoping_review.qmd"
+  # )
+  tar_target(
     name = ferc_scoping_review_report,
-    path = "reports/scoping-review/ferc_scoping_review.qmd"
+    command = render_quarto_report(
+      input = "reports/scoping-review/ferc_scoping_review.qmd"
+    ),
+    format = "file"
   )
 )
 
