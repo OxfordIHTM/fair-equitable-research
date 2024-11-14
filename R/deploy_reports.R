@@ -9,22 +9,10 @@
 #' 
 
 deploy_report <- function(report_links) {
-  report_links <- stringr::str_detect(report_links, "Rmd|qmd", negate = TRUE) |>
-    (\(x) report_links[x])()
-
-  directory_name <- dirname(report_links) |> basename() |> unique()
-
-  file_name <- basename(report_links)
-
-  to <- file.path("docs", directory_name)
-
-  dir.create(path = to, showWarnings = FALSE)
+  to <- dirname(report_links) |> basename() |> unique()
 
   file.copy(from = report_links, to = to, recursive = TRUE)
 
   
-  file.path(
-    "https://oxford-ihtm.io/fair-equitable-research", 
-    directory_name, file_name
-  )
+  file.path("https://oxford-ihtm.io/fair-equitable-research", file_name)
 }
