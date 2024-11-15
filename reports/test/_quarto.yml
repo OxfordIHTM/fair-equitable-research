@@ -1,0 +1,26 @@
+project:
+  output-dir: docs
+
+bibliography: ../references.bib
+
+format: 
+  html:
+    toc: true
+    toc-location: left
+    embed-resources: true
+    grid:
+      body-width: 900px
+      margin-width: 300px
+    code-tools:
+      source: https://github.com/OxfordIHTM/fair-equitable-research/blob/main/reports/test_report.qmd
+  pdf:
+    documentclass: scrartcl
+    papersize: a4
+    toc: true
+    toc-title: Contents
+    lof: true
+    lot: true
+    number-sections: true
+    number-depth: 3
+    highlight-style: breeze
+  
