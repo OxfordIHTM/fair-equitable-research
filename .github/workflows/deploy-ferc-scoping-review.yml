@@ -42,7 +42,7 @@ jobs:
         
       - name: Run workflow
         run: |
-          targets::tar_make(ferc_scoping_review_report_url)
+          targets::tar_make(ferc_scoping_review_report)
         shell: Rscript {0}
 
       - name: Commit and push files
@@ -51,5 +51,10 @@ jobs:
           git config --global user.name "ernestguevarra"
           git add .
           git diff-index --quiet HEAD || git commit -m "update ihtm feedback report"
+          git push
+          git checkout gh-pages
+          git checkout main -- reports/scoping-review/docs/ferc_scoping_review.html
+          git checkout main -- reports/scoping-review/docs/ferc_scoping_review.pdf
+          git commit -m "update scoping review report"
           git push
         
