@@ -1,6 +1,8 @@
 name: deploy ferc scoping review report
 
 on:
+  push:
+    branches: [main, master]
   workflow_dispatch:
 
 jobs:
