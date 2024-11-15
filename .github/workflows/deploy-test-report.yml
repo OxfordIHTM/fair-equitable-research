@@ -1,4 +1,4 @@
-name: deploy ferc scoping review report
+name: deploy test report
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy-ferc-scoping-review-report:
+  deploy-test-report:
     runs-on: ubuntu-latest
     container: rocker/tidyverse:4.4.2
     env:
@@ -44,7 +44,7 @@ jobs:
         
       - name: Run workflow
         run: |
-          targets::tar_make(ferc_scoping_review_report)
+          targets::tar_make(test_report)
         shell: Rscript {0}
 
       - name: Commit and push files
@@ -52,10 +52,10 @@ jobs:
           git config --global user.email "ernest@guevarra.io"
           git config --global user.name "ernestguevarra"
           git add .
-          git diff-index --quiet HEAD || git commit -m "update scoping review report"
+          git diff-index --quiet HEAD || git commit -m "update test report"
           git push
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: reports/scoping-review/docs
+          folder: reports/test/docs
